@@ -32,14 +32,6 @@ const treeData = {
          name: "StipePago",
          children: [
             {
-               name: "SuccessAlert",
-               attributes: {
-                  función:
-                     "Muestra un mensaje arriba a la derecha de la pantalla cuando se realiza un pago exitoso",
-                  refactor: "TBD",
-               },
-            },
-            {
                name: "TerminosCondiciones",
                attributes: {
                   función: "Se encarga de mostrar el RAW de los terminos y condiciones",
@@ -278,7 +270,8 @@ const treeData = {
                   {
                      name: "DialogGuardados",
                      attributes: {
-                        función: "Renderiza las tres secciones del paso 3: Datos, Estructura y Modelo",
+                        función:
+                           "Renderiza las tres secciones del paso 3: Datos, Estructura y Modelo",
                         refactor: "TBD",
                      },
                   },
@@ -298,14 +291,29 @@ const treeData = {
                      children: [
                         {
                            name: "OngTextField",
+                           attributes: {
+                              función:
+                                 "Renderiza una caja de texto no editable con su respectiva información",
+                              refactor: "TBD",
+                           },
                            children: [
                               {
                                  name: "EditarOngTextField",
+                                 attributes: {
+                                    función:
+                                       "Renderiza un dialog para editar la información de la caja de texto, guarda la información en la base",
+                                    refactor: "TBD",
+                                 },
                               },
                            ],
                         },
                         {
                            name: "OngArchivo",
+                           attributes: {
+                              función:
+                                 "Renderiza un estatus del informe, una caja de texto con descripción del estatus y un botón para subir el informe",
+                              refactor: "TBD",
+                           },
                            children: [
                               {
                                  name: "GuardarInforme",
@@ -320,57 +328,97 @@ const treeData = {
                         },
                         {
                            name: "OdsTextField",
-                        },
-                        {
-                           name: "EditarDatos",
-                        },
-                        {
-                           name: "SuccessAlert",
-                        },
-                        {
-                           name: "CustomDialog",
+                           attributes: {
+                              función:
+                                 "Muestra una caja de texto no editable con su respectiva información",
+                              refactor: "TBD",
+                           },
                         },
                         {
                            name: "Status",
+                           attributes: {
+                              función:
+                                 "Renderiza un texto con su respectivo color dependiendo del estatus",
+                              refactor: "TBD",
+                           },
                         },
                      ],
                   },
                   {
                      name: "Estructura",
+                     attributes: {
+                        función:
+                           "Se encarga de renderizar el estatus de la sección, de los botones para ingresar, guardar, editar e enviar y las respuestas de las preguntas del formulario",
+                        refactor: "TBD",
+                     },
                      children: [
                         {
                            name: "Formulario",
+                           attributes: {
+                              función:
+                                 "Renderiza un dialog para llenar las preguntas del formulario",
+                              refactor: "TBD",
+                           },
                            children: [
                               {
                                  name: "Estrellas",
+                                 attributes: {
+                                    función:
+                                       "Renderiza 5 estrellas para las preguntas de calificación",
+                                    refactor: "TBD",
+                                 },
                               },
                            ],
                         },
                         {
                            name: "EstructuraTextField",
+                           attributes: {
+                              función:
+                                 "Renderiza una caja de texto con su pregunta y su respectiva respuesta",
+                              refactor: "TBD",
+                           },
                         },
                      ],
                   },
                   {
                      name: "Modelo",
+                     attributes: {
+                        función:
+                           "Renderiza los botones para agregar nuevos ejes, enviar ejes y los ejes guardados separados en una caja con un botón para editarlos",
+                        refactor: "TBD",
+                     },
                      children: [
                         {
                            name: "CreaNuevoEje",
-                        },
-                        {
-                           name: "SuccessAlert",
-                        },
-                        {
-                           name: "CustomDialog",
+                           attributes: {
+                              función:
+                                 "Muestra un Dialog con cajas de texto para crear un nuevo eje",
+                              refactor: "TBD",
+                           },
                         },
                         {
                            name: "EditarEje",
+                           attributes: {
+                              función:
+                                 "Muestra un Dialog idéntico a CreaNuevoEje pero con la información del eje a editar",
+                              refactor: "TBD",
+                           },
                         },
                         {
                            name: "Status",
+                           attributes: {
+                              función:
+                                 "Renderiza un texto con su respectivo color dependiendo del estatus",
+                              refactor: "TBD",
+                           },
                         },
                         {
                            name: "MensajeRechazado",
+                           attributes: {
+                              función:
+                                 "Renderiza un ícono de mensaje con un ToolTip que muestra la razón del rechazo",
+                              refactor: "TBD",
+                           },
                         },
                      ],
                   },
