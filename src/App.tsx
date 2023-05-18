@@ -479,6 +479,10 @@ const treeData = {
                      children: [
                         {
                            name: "Calificacion",
+                           attributes: {
+                              función: "Circulo con el porcentaje de la calificación",
+                              refactor: ":)",
+                           },
                         },
                         {
                            name: "Explicacion",
@@ -494,6 +498,10 @@ const treeData = {
                      children: [
                         {
                            name: "DetallesCard",
+                           attributes: {
+                              función: "Renderiza una carta con la calificación desglosada por sección",
+                              refactor: ":)",
+                           },
                         },
                      ],
                   },
@@ -502,9 +510,17 @@ const treeData = {
                      children: [
                         {
                            name: "Aprobado",
+                           attributes: {
+                              función: "Mensaje de Felicitación si aprobó el certificado",
+                              refactor: "Mejorar el UI/UX pues no tiene un diseño atractivo",
+                           },
                         },
                         {
                            name: "Reprobado",
+                           attributes: {
+                              función: "Mensaje si no pasó el certificado",
+                              refactor: "Mejorar el UI/UX pues no tiene un diseño atractivo",
+                           },
                         },
                      ],
                   },
@@ -519,6 +535,10 @@ const treeData = {
                children: [
                   {
                      name: "Card",
+                     attributes: {
+                        función: "Renderiza una carta con un botón para descargar evaluación y otro para descargar certificado",
+                        refactor: ":)",
+                     },
                   },
                ],
             },
@@ -531,9 +551,17 @@ const treeData = {
                children: [
                   {
                      name: "IconGuardado",
+                     attributes: {
+                        función: "Renderiza un ícono con un badge para mostrar cuántos documentos guardados tiene por enviar",
+                        refactor: ":)",
+                     },
                   },
                   {
                      name: "IconRechazado",
+                     attributes: {
+                        función: "Renderiza un ícono con un badge para mostrar cuántos documentos rechazados tiene",
+                        refactor: ":)",
+                     },
                   },
                ],
             },
