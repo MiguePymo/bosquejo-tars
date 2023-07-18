@@ -10,14 +10,14 @@ const treeData = {
          name: "Login",
          attributes: {
             función: "Se encarga del inicio de sesion",
-            refactor: "Contiene demasiadas funciones como pagar, activar cuenta, etc. sin explicación al usuario de qué hace cada una",
+            refactor:
+               "Contiene demasiadas funciones como pagar, activar cuenta, etc. sin explicación al usuario de qué hace cada una",
          },
       },
       {
          name: "NuevaCuenta",
          attributes: {
-            función:
-               "Busca tener un primer contacto con las ONG's interesadas, conocidas como leads",
+            función: "Busca tener un primer contacto con las ONG's interesadas, conocidas como leads",
             refactor: ":)",
          },
       },
@@ -47,8 +47,7 @@ const treeData = {
       {
          name: "Deposito",
          attributes: {
-            función:
-               "Muestra las instrucciones para realizar un depósito para el pago de la plataforma",
+            función: "Muestra las instrucciones para realizar un depósito para el pago de la plataforma",
             refactor: ":)",
          },
       },
@@ -96,19 +95,49 @@ const treeData = {
          name: "Dashboard",
          children: [
             {
+               name: "PasoActual",
+               attributes: {
+                  función: "Muestra el paso actual en el que se encuentra el usuario",
+                  refactor: ":)",
+               },
+            },
+            {
                name: "DialogRechazados",
                attributes: {
                   función: "Muestra un dialogo con los documentos rechazados por paso",
-                  refactor: "El componente más importante, pero que realiza demasiadas funcionalidades al cargar los datos el usuario. También se encarga de las funcionalidades de otros componentes como el sidebar. Debemos modulizar el dashboard que funcione únicamente como un indice. Se debe refactorizar para que solo se encargue de renderizar los datos y no de cargarlos. Para ello se deben buscar los datos en el backend con funciones auxiliares",
+                  refactor: ":)",
                },
             },
             {
                name: "Topbar",
                attributes: {
-                  función:
-                     "Renderiza la barra superior de la plataforma con el logo y el nombre de la ONG",
+                  función: "Renderiza la barra superior de la plataforma con el logo y el nombre de la ONG",
                   refactor: "Cambiar el css pues está hardcodeado y no permite nuevos elementos de manera fácil",
                },
+               children: [
+                  {
+                     name: "AdminPerfil",
+                     attributes: {
+                        función: "Dialog que muestra dops opciones: config perfil y admin suscripción",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "ConfigPerfil",
+                     attributes: {
+                        función: "Dialog que permite modificar el correo electrónico",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "AdminSuscripcion",
+                     attributes: {
+                        función:
+                           "Dialog que permite modificar la suscripción: modificar tarjeta, cancelar suscripción, etc.",
+                        refactor: ":)",
+                     },
+                  },
+               ],
             },
             {
                name: "DashboardDocumentos",
@@ -174,15 +203,16 @@ const treeData = {
                                        attributes: {
                                           función:
                                              "Renderiza un botón que se encarga de mostrar un dialogo para guardar el documento",
-                                          refactor: "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
+                                          refactor:
+                                             "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
                                        },
                                     },
                                     {
                                        name: "EnviarDoc",
                                        attributes: {
-                                          función:
-                                             "Envia el documento para que los evaluadores lo revisen",
-                                             refactor: "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
+                                          función: "Envia el documento para que los evaluadores lo revisen",
+                                          refactor:
+                                             "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
                                        },
                                     },
                                  ],
@@ -201,16 +231,14 @@ const treeData = {
                   {
                      name: "PLD",
                      attributes: {
-                        función:
-                           "Renderiza la sección de PLD para ingresar datos o enviar la información necesaria",
+                        función: "Renderiza la sección de PLD para ingresar datos o enviar la información necesaria",
                         refactor: "Modificar el UI/UX pues no tiene un diseño atractivo",
                      },
                      children: [
                         {
                            name: "EditarPLD",
                            attributes: {
-                              función:
-                                 "Renderiza un dialog para editar o ingresar la información de PLD",
+                              función: "Renderiza un dialog para editar o ingresar la información de PLD",
                               refactor: ":)",
                            },
                         },
@@ -221,8 +249,7 @@ const treeData = {
             {
                name: "Tabla",
                attributes: {
-                  función:
-                     "Renderiza una tabla con filas que contienen los documentos requeridos por la plataforma",
+                  función: "Renderiza una tabla con filas que contienen los documentos requeridos por la plataforma",
                   refactor: ":)",
                },
                children: [
@@ -246,14 +273,16 @@ const treeData = {
                            attributes: {
                               función:
                                  "Renderiza un botón que se encarga de mostrar un dialogo para guardar el documento",
-                                 refactor: "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
+                              refactor:
+                                 "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
                            },
                         },
                         {
                            name: "EnviarDoc",
                            attributes: {
                               función: "Envia el documento para que los evaluadores lo revisen",
-                              refactor: "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
+                              refactor:
+                                 "Unificar el componente para que se pueda implementar en N pasos sin tener que especificar los props por cada paso",
                            },
                         },
                      ],
@@ -270,8 +299,7 @@ const treeData = {
                   {
                      name: "DialogGuardados",
                      attributes: {
-                        función:
-                           "Renderiza las tres secciones del paso 3: Datos, Estructura y Modelo",
+                        función: "Renderiza las tres secciones del paso 3: Datos, Estructura y Modelo",
                         refactor: ":)",
                      },
                   },
@@ -290,28 +318,41 @@ const treeData = {
                      },
                      children: [
                         {
-                           name: "OngTextField",
+                           name: "Informacion",
                            attributes: {
-                              función:
-                                 "Renderiza una caja de texto no editable con su respectiva información",
-                              refactor: ":)",
+                              función: "Contender que renderiza los textfields de sección de Información",
                            },
                            children: [
                               {
-                                 name: "EditarOngTextField",
+                                 name: "OngTextField",
                                  attributes: {
-                                    función:
-                                       "Renderiza un dialog para editar la información de la caja de texto, guarda la información en la base",
+                                    función: "Renderiza una caja de texto no editable con su respectiva información",
+                                    refactor: ":)",
+                                 },
+                                 children: [
+                                    {
+                                       name: "EditarOngTextField",
+                                       attributes: {
+                                          función:
+                                             "Renderiza un dialog para editar la información de la caja de texto, guarda la información en la base",
+                                          refactor: ":)",
+                                       },
+                                    },
+                                 ],
+                              },
+                              {
+                                 name: "Status",
+                                 attributes: {
+                                    función: "Renderiza un texto con su respectivo color dependiendo del estatus",
                                     refactor: ":)",
                                  },
                               },
                            ],
                         },
                         {
-                           name: "OngArchivo",
+                           name: "Informes",
                            attributes: {
-                              función:
-                                 "Renderiza un estatus del informe, una caja de texto con descripción del estatus y un botón para subir el informe",
+                              función: "Contender que renderiza los informes de la sección de Información",
                               refactor: ":)",
                            },
                            children: [
@@ -324,23 +365,15 @@ const treeData = {
                               {
                                  name: "Status",
                               },
+                              {
+                                 name: "OngArchivo",
+                                 attributes: {
+                                    función:
+                                       "Renderiza un estatus del informe, una caja de texto con descripción del estatus y un botón para subir el informe",
+                                    refactor: ":)",
+                                 },
+                              },
                            ],
-                        },
-                        {
-                           name: "OdsTextField",
-                           attributes: {
-                              función:
-                                 "Muestra una caja de texto no editable con su respectiva información",
-                              refactor: ":)",
-                           },
-                        },
-                        {
-                           name: "Status",
-                           attributes: {
-                              función:
-                                 "Renderiza un texto con su respectivo color dependiendo del estatus",
-                              refactor: ":)",
-                           },
                         },
                      ],
                   },
@@ -355,16 +388,37 @@ const treeData = {
                         {
                            name: "Formulario",
                            attributes: {
-                              función:
-                                 "Renderiza un dialog para llenar las preguntas del formulario",
-                              refactor: "Modificar la manera en que renderizan los estados de cada pregunta pues está hardcodeado cada estado de la pregunta y no lo renderiza de manera numerable, es decir, sin importar el tamaño de las preguntas",
+                              función: "Renderiza un dialog para llenar las preguntas del formulario",
+                              refactor:
+                                 "Modificar la manera en que renderizan los estados de cada pregunta pues está hardcodeado cada estado de la pregunta y no lo renderiza de manera numerable, es decir, sin importar el tamaño de las preguntas",
                            },
                            children: [
                               {
                                  name: "Estrellas",
                                  attributes: {
+                                    función: "Renderiza 5 estrellas para las preguntas de calificación",
+                                    refactor: ":)",
+                                 },
+                              },
+                              {
+                                 name: "RadioButtton1",
+                                 attributes: {
+                                    función: "Renderiza dos botones de radio para las preguntas de sí o no",
+                                    refactor: ":)",
+                                 },
+                              },
+                              {
+                                 name: "RadioButtton2",
+                                 attributes: {
                                     función:
-                                       "Renderiza 5 estrellas para las preguntas de calificación",
+                                       "Renderiza 5 opciones desde totalmente en desacuerdo hasta totalmente de acuerdo",
+                                    refactor: ":)",
+                                 },
+                              },
+                              {
+                                 name: "PreguntaIndividual",
+                                 attributes: {
+                                    función: "Renderiza una pregunta con su respectiva respuesta",
                                     refactor: ":)",
                                  },
                               },
@@ -373,8 +427,15 @@ const treeData = {
                         {
                            name: "EstructuraTextField",
                            attributes: {
+                              función: "Renderiza una caja de texto con su pregunta y su respectiva respuesta",
+                              refactor: ":)",
+                           },
+                        },
+                        {
+                           name: "EstructuraContainer",
+                           attributes: {
                               función:
-                                 "Renderiza una caja de texto con su pregunta y su respectiva respuesta",
+                                 "Renderiza un contenedor con las preguntas y respuestas de la sección de Estructura",
                               refactor: ":)",
                            },
                         },
@@ -391,8 +452,7 @@ const treeData = {
                         {
                            name: "CreaNuevoEje",
                            attributes: {
-                              función:
-                                 "Muestra un Dialog con cajas de texto para crear un nuevo eje",
+                              función: "Muestra un Dialog con cajas de texto para crear un nuevo eje",
                               refactor: ":)",
                            },
                         },
@@ -407,16 +467,42 @@ const treeData = {
                         {
                            name: "Status",
                            attributes: {
-                              función:
-                                 "Renderiza un texto con su respectivo color dependiendo del estatus",
+                              función: "Renderiza un texto con su respectivo color dependiendo del estatus",
                               refactor: ":)",
                            },
                         },
                         {
                            name: "MensajeRechazado",
                            attributes: {
-                              función:
-                                 "Renderiza un ícono de mensaje con un ToolTip que muestra la razón del rechazo",
+                              función: "Renderiza un ícono de mensaje con un ToolTip que muestra la razón del rechazo",
+                              refactor: ":)",
+                           },
+                        },
+                        {
+                           name: "OdsTextField",
+                           attributes: {
+                              función: "Muestra una caja de texto no editable con su respectiva información",
+                              refactor: ":)",
+                           },
+                        },
+                        {
+                           name: "EjeDeAccion",
+                           attributes: {
+                              función: "Renderiza un eje de acción con su respectiva información",
+                              refactor: ":)",
+                           },
+                        },
+                        {
+                           name: "ModeloContainer",
+                           attributes: {
+                              función: "Renderiza un contenedor con la información de los ejes de acción",
+                              refactor: ":)",
+                           },
+                        },
+                        {
+                           name: "ProblemaTextField",
+                           attributes: {
+                              función: "Renderiza una caja de texto no editable con su respectiva información",
                               refactor: ":)",
                            },
                         },
@@ -441,7 +527,8 @@ const treeData = {
                   {
                      name: "Fila",
                      attributes: {
-                        función: "Renderiza una fila con el nombre del documento y un botón para subirlo y otro para enviarlo",
+                        función:
+                           "Renderiza una fila con el nombre del documento y un botón para subirlo y otro para enviarlo",
 
                         refactor: ":)",
                      },
@@ -536,7 +623,35 @@ const treeData = {
                   {
                      name: "Card",
                      attributes: {
-                        función: "Renderiza una carta con un botón para descargar evaluación y otro para descargar certificado",
+                        función:
+                           "Renderiza una carta con un botón para descargar evaluación y otro para descargar certificado",
+                        refactor: ":)",
+                     },
+                  },
+               ],
+            },
+            {
+               name: "Renovacion",
+               children: [
+                  {
+                     name: "BloqueoDialog",
+                     attributes: {
+                        función: "Renderiza un Dialog para bloquear el uso de TARS",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "WarningDialog",
+                     attributes: {
+                        función:
+                           "Renderiza un Dialog para advertir que a la ong que le quedan 30 días o menos para renovar",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "RenovacionDialog",
+                     attributes: {
+                        función: "Renderiza un Dialog para renovar CASE ",
                         refactor: ":)",
                      },
                   },
@@ -546,13 +661,15 @@ const treeData = {
                name: "Sidebar",
                attributes: {
                   función: "Renderiza la barra lateral con los botones de cada paso",
-                  refactor: "Implementar una funcionalidad de estados para que seleccione el paso en el que se encuentra el usuario y renderice su contenido. Modificar el css pues está hardcodeado y no permite nuevos elementos de manera fácil",
+                  refactor:
+                     "Implementar una funcionalidad de estados para que seleccione el paso en el que se encuentra el usuario y renderice su contenido. Modificar el css pues está hardcodeado y no permite nuevos elementos de manera fácil",
                },
                children: [
                   {
                      name: "IconGuardado",
                      attributes: {
-                        función: "Renderiza un ícono con un badge para mostrar cuántos documentos guardados tiene por enviar",
+                        función:
+                           "Renderiza un ícono con un badge para mostrar cuántos documentos guardados tiene por enviar",
                         refactor: ":)",
                      },
                   },
@@ -560,6 +677,27 @@ const treeData = {
                      name: "IconRechazado",
                      attributes: {
                         función: "Renderiza un ícono con un badge para mostrar cuántos documentos rechazados tiene",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "SideBar",
+                     attributes: {
+                        function: "Renderiza los botones de cada paso",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "Tabs",
+                     attributes: {
+                        function: "Maneja la lógica de los tabs activos de cada paso",
+                        refactor: ":)",
+                     },
+                  },
+                  {
+                     name: "Tab",
+                     attributes: {
+                        function: "Renderiza un tab con su respectivo nombre",
                         refactor: ":)",
                      },
                   },
@@ -598,11 +736,7 @@ const renderCircleSvgNode = ({ nodeDatum, toggleNode }) => {
 function App() {
    return (
       <div id="treeWrapper" style={{ width: "100vw", height: "100vh" }}>
-         <Tree
-            data={treeData}
-            orientation="vertical"
-            renderCustomNodeElement={renderCircleSvgNode}
-         />
+         <Tree data={treeData} orientation="vertical" renderCustomNodeElement={renderCircleSvgNode} />
       </div>
    );
 }
